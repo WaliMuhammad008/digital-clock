@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Courier New', monospace;
+}
+
+.container {
+    text-align: center;
+}
+
+.clock {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 40px 60px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 
+                0 0 40px rgba(102, 126, 234, 0.5);
+    margin-bottom: 30px;
+    border: 3px solid rgba(102, 126, 234, 0.6);
+}
+
+.time-display {
+    font-size: 80px;
+    font-weight: bold;
+    color: #00ff88;
+    letter-spacing: 10px;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.8),
+                 0 0 40px rgba(102, 126, 234, 0.6);
+    font-family: 'Courier New', monospace;
+}
+
+.separator {
+    animation: blink 1s infinite;
+    display: inline-block;
+}
+
+@keyframes blink {
+    0%, 49% {
+        opacity: 1;
+    }
+    50%, 100% {
+        opacity: 0.3;
+    }
+}
+
+.period {
+    font-size: 40px;
+    color: #00ff88;
+    margin-top: 15px;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.8);
+    font-weight: bold;
+}
+
+.date-display {
+    font-size: 24px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px 40px;
+    border-radius: 15px;
+    border: 2px solid rgba(102, 126, 234, 0.4);
+    text-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+#date {
+    display: inline-block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .time-display {
+        font-size: 50px;
+        letter-spacing: 5px;
+    }
+
+    .period {
+        font-size: 25px;
+    }
+
+    .date-display {
+        font-size: 16px;
+        padding: 15px 25px;
+    }
+
+    .clock {
+        padding: 30px 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .time-display {
+        font-size: 36px;
+        letter-spacing: 3px;
+    }
+
+    .period {
+        font-size: 18px;
+    }
+
+    .date-display {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .clock {
+        padding: 20px 30px;
+    }
+}
